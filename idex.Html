@@ -6,14 +6,27 @@
     <meta name="author" content="Daniel Cruz">
     <meta name="description" content="A portfolio showcasing my web development work and projects.">
     <title>Daniel Cruz | Portfolio</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 
-<body>
+<body id="top">
     <!-- Daniel Cruz | Portfolio | 2026-09-25 -->
     <!-- Chapter 1 -->
     <!-- Portfolio Website -->
-    <h1>Hello World</h1>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
 
+        <h1>Hello World</h1>
         <section id="home">
             <!-- Chapter 2.1 -->
             <h2>Daniel Cruz</h2>
@@ -27,7 +40,7 @@
         <section id="about">
             <h2>About Me</h2>
             <p>Hello! I am Daniel Cruz, a cybersecurity enthusiast.</p>
-            <p>I enjoy learning new technologies.</p>
+            <p>I enjoy learning.</p>
         </section>
 
         <!-- Chapter 1: Projects Section -->
@@ -35,4 +48,24 @@
             <h2>Projects</h2>
             <article>
                 <h3>Portfolio Website</h3>
-                <p> A personal website designed to showcase my work and skills.</p>
+
+            </article>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p><a href="mailto:dc08169@gmail.com?subject=Portfolio%20Inquiry">Email</a></p>
+            <button type="button" onclick="window.print()">Print This Page</button>
+            <button type="button" onclick="alert('Coming soon!')">Newsletter signup</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            <a href="https://github.com/dcruz-cyber1" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/daniel-cruz-20aa44377/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </p>
+        <p><a href="Daniel-Cruz-Resume.pdf" download>Download my resume</a></p>
+    </footer>
+</body>
+</html>
