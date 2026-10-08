@@ -10,12 +10,37 @@
         html {
             scroll-behavior: smooth;
         }
+
+        .profile-figure {
+            margin: 1rem 0;
+        }
+
+        .profile-figure img,
+        .project-card img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .project-card {
+            margin: 0;
+        }
+
+        .project-card figcaption {
+            font-weight: bold;
+        }
     </style>
 </head>
 
 <body id="top">
     <!-- Daniel Cruz | Portfolio | 2026-09-25 -->
-    <!-- Chapter 1 -->
     <!-- Portfolio Website -->
     <header id="hero">
         <nav>
@@ -29,18 +54,15 @@
 
         <h1>Hello World</h1>
         <section id="home">
-            <!-- Chapter 2.1 -->
+            <!-- Introduction -->
             <h2>Daniel Cruz</h2>
             <h3><em>Cybersecurity Student</em></h3>
             <p>Cybersecurity student dual enrolled at Ocean County Vocational Technical School and Ocean County College (AAS in Cybersecurity). Security+ certified.</p>
         </section>
-    </header>
 
-    <!-- Chapter 1: About Section -->
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <div class="about-content">
+    </header>
+                    <figcaption>Daniel Cruz - Cybersecurity Student</figcaption>
+                </figure>
                 <p>Hello! I am Daniel Cruz, a cybersecurity student with hands-on experience building and defending a self hosted SOC environment, running machine learning based intrusion detection, and analyzing threat data.</p>
                 <p>I am seeking an internship or entry level opportunity in cybersecurity or data analysis.</p>
                 <aside>
@@ -56,7 +78,7 @@
         </section>
 
         <section id="skills">
-            <!-- Chapter 5.1: Technical Skills -->
+            <!-- Technical Skills -->
             <h2>Skills</h2>
             <h3>Technical Skills</h3>
             <ul>
@@ -85,16 +107,37 @@
                 <li>Communication</li>
             </ul>
 
-            <!-- Chapter 5.2: Career Timeline -->
+            <!-- Career Timeline -->
             <h3>Career Timeline</h3>
             <ol class="timeline">
                 
             </ol>
         </section>
 
-        <!-- Chapter 5.3: Projects Table -->
+        <!-- Projects Table -->
         <section id="projects">
             <h2>Projects</h2>
+            <!-- Chapter 6.2: Project Thumbnails -->
+            <div class="projects-grid">
+                <figure class="project-card">
+                    <img src="https://placehold.co/640x360/1e3a8a/ffffff?text=ML+Attack+Detection"
+                         alt="Placeholder thumbnail for the machine-learning cyber attack detection thesis"
+                         width="640" height="360" loading="lazy">
+                    <figcaption>ML-Based Cyber Attack Detection Thesis</figcaption>
+                </figure>
+                <figure class="project-card">
+                    <img src="https://placehold.co/640x360/14532d/ffffff?text=Homelab+SOC"
+                         alt="Placeholder thumbnail representing the homelab security operations center and incident response project"
+                         width="640" height="360" loading="lazy">
+                    <figcaption>Homelab: Attack Detection &amp; Incident Response</figcaption>
+                </figure>
+                <figure class="project-card">
+                    <img src="https://placehold.co/640x360/7c2d12/ffffff?text=Splunk+Threat+Detection"
+                         alt="Placeholder thumbnail representing the Splunk threat detection project"
+                         width="640" height="360" loading="lazy">
+                    <figcaption>Splunk Threat Detection Project</figcaption>
+                </figure>
+            </div>
             <table>
                 <caption>Selected projects and their current status</caption>
                 <thead>
@@ -130,8 +173,6 @@
                 </tbody>
                 <tfoot>
                     <tr>
-                        <th colspan="3" scope="row">Total Projects</th>
-                        <td>3</td>
                     </tr>
                 </tfoot>
             </table>
