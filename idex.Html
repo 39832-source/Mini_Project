@@ -36,6 +36,33 @@
         .project-card figcaption {
             font-weight: bold;
         }
+
+        /* Chapter 7 */
+        #contact form {
+            display: grid;
+            gap: 1rem;
+            max-width: 40rem;
+        }
+
+        #contact form > label {
+            display: block;
+        }
+
+        #contact input[type="text"],
+        #contact input[type="email"],
+        #contact textarea,
+        #contact form > label input[type="text"],
+        #contact form > label input[type="email"] {
+            box-sizing: border-box;
+            display: block;
+            margin-top: 0.25rem;
+            max-width: 100%;
+            width: 100%;
+        }
+
+        #contact form button {
+            margin-right: 0.5rem;
+        }
     </style>
 </head>
 
@@ -179,10 +206,31 @@
         </section>
 
         <section id="contact">
-            <h2>Contact</h2>
+            <!-- Chapter 7 -->
+            <h2>Contact Me</h2>
             <p><a href="mailto:dc08169@gmail.com?subject=Portfolio%20Inquiry">Email</a></p>
-            <button type="button" onclick="window.print()">Print This Page</button>
-            <button type="button" onclick="alert('Coming soon!')">Newsletter signup</button>
+            <form id="contactForm" action="#" method="POST">
+                <label for="contactName">Your Name</label>
+                <input id="contactName" type="text" name="name" placeholder="Your Name"
+                       autocomplete="name" required>
+
+                <label for="contactEmail">Your Email</label>
+                <input id="contactEmail" type="email" name="email" placeholder="Your Email"
+                       autocomplete="email" required>
+
+                <label for="contactMessage">Your Message</label>
+                <textarea id="contactMessage" name="message" rows="5"
+                          placeholder="Your Message"></textarea>
+
+                <input type="hidden" name="formLoadedAt" id="formLoadedAt">
+
+                <div>
+                    <button id="sendMessage" type="submit">Send Message 🚀</button>
+                    <button type="button" id="clearForm">Clear Form</button>
+                    <button type="button" id="printForm">Print</button>
+                </div>
+                <output id="formConfirmation" aria-live="polite"></output>
+            </form>
         </section>
     </main>
 
@@ -194,5 +242,34 @@
         <p><a href="Daniel-Cruz-Resume.pdf" download>Download my resume</a></p>
         <p><a href="#top">Back to Top</a></p>
     </footer>
+    <!-- Chapter 7 -->
+    <script>
+        const contactForm = document.getElementById("contactForm");
+        const sendMessageButton = document.getElementById("sendMessage");
+        const formConfirmation = document.getElementById("formConfirmation");
+        const formLoadedAt = document.getElementById("formLoadedAt");
+
+        formLoadedAt.value = new Date().toISOString();
+
+        contactForm.addEventListener("submit", (event) => {
+            event.preventDefault();
+            formConfirmation.textContent = "Thank you! Your inquiry is ready to be sent.";
+            sendMessageButton.disabled = true;
+        });
+
+        contactForm.addEventListener("reset", () => {
+            sendMessageButton.disabled = false;
+            formConfirmation.textContent = "";
+            formLoadedAt.value = new Date().toISOString();
+        });
+
+        document.getElementById("clearForm").addEventListener("click", () => {
+            contactForm.reset();
+        });
+
+        document.getElementById("printForm").addEventListener("click", () => {
+            window.print();
+        });
+    </script>
 </body>
 </html>
