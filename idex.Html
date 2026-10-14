@@ -6,64 +6,7 @@
     <meta name="author" content="Daniel Cruz">
     <meta name="description" content="A portfolio showcasing my web development work and projects.">
     <title>Daniel Cruz | Portfolio</title>
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-
-        .profile-figure {
-            margin: 1rem 0;
-        }
-
-        .profile-figure img,
-        .project-card img {
-            display: block;
-            max-width: 100%;
-            height: auto;
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1rem;
-            margin-bottom: 2rem;
-        }
-
-        .project-card {
-            margin: 0;
-        }
-
-        .project-card figcaption {
-            font-weight: bold;
-        }
-
-        /* Chapter 7 */
-        #contact form {
-            display: grid;
-            gap: 1rem;
-            max-width: 40rem;
-        }
-
-        #contact form > label {
-            display: block;
-        }
-
-        #contact input[type="text"],
-        #contact input[type="email"],
-        #contact textarea,
-        #contact form > label input[type="text"],
-        #contact form > label input[type="email"] {
-            box-sizing: border-box;
-            display: block;
-            margin-top: 0.25rem;
-            max-width: 100%;
-            width: 100%;
-        }
-
-        #contact form button {
-            margin-right: 0.5rem;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body id="top">
@@ -265,6 +208,9 @@
 
         document.getElementById("clearForm").addEventListener("click", () => {
             contactForm.reset();
+
+
+            
         });
 
         document.getElementById("printForm").addEventListener("click", () => {

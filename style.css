@@ -1,0 +1,117 @@
+/* Chapter 8 */
+:root {
+    --primary: #2563eb;
+    --primary-visited: #1e40af;
+    --text-color: #1e293b;
+    --background-color: #f8fafc;
+    --heading-secondary: #1e40af;
+    --heading-tertiary: #475569;
+    --link-hover: #f59e0b;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+}
+
+:is(h1, h2, h3) {
+    font-family: Georgia, serif;
+}
+
+h1 {
+    color: var(--primary);
+    font-size: 2.5rem;
+}
+
+h2 {
+    color: var(--heading-secondary);
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: var(--heading-tertiary);
+    font-weight: 600;
+}
+
+a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:visited {
+    color: var(--primary-visited);
+}
+
+a:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+}
+
+a:focus {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+}
+
+a:active {
+    color: var(--heading-secondary);
+}
+
+.profile-figure {
+    margin: 1rem 0;
+}
+
+.profile-figure img,
+.project-card img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.project-card {
+    margin: 0;
+}
+
+.project-card figcaption {
+    font-weight: bold;
+}
+
+/* Chapter 7 */
+#contact form {
+    display: grid;
+    gap: 1rem;
+    max-width: 40rem;
+}
+
+#contact form > label {
+    display: block;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea,
+#contact form > label input[type="text"],
+#contact form > label input[type="email"] {
+    box-sizing: border-box;
+    display: block;
+    margin-top: 0.25rem;
+    max-width: 100%;
+    width: 100%;
+}
+
+#contact form button {
+    margin-right: 0.5rem;
+}
