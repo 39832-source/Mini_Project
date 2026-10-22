@@ -188,3 +188,59 @@ footer {
 .m-2 {
     margin: 1rem;
 }
+
+/* Chapter 10 */
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+:is(h1, h2, h3) {
+    font-family: "Georgia", "Times New Roman", serif;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+code,
+kbd,
+samp,
+.technical-term {
+    font-family: "Courier New", monospace;
+}
+
+input,
+textarea,
+button,
+select {
+    font: inherit;
+}
+
+.tagline {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+nav a {
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+blockquote {
+    font-style: italic;
+    line-height: 1.8;
+}
