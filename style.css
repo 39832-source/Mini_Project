@@ -1,12 +1,12 @@
 /* Chapter 8 */
 :root {
-    --primary: #2563eb;
-    --primary-visited: #1e40af;
-    --text-color: #1e293b;
-    --background-color: #f8fafc;
-    --heading-secondary: #1e40af;
-    --heading-tertiary: #475569;
-    --link-hover: #f59e0b;
+    --primary: #4ade80;
+    --primary-visited: #86efac;
+    --text-color: #86efac;
+    --background-color: #1b102b;
+    --heading-secondary: #4ade80;
+    --heading-tertiary: #86efac;
+    --link-hover: #bef264;
 }
 
 html {
@@ -83,10 +83,15 @@ a:active {
 
 .project-card {
     margin: 0;
+    overflow: hidden;
+    background: #241635;
+    border: 1px solid #4c3563;
 }
 
 .project-card figcaption {
     font-weight: bold;
+    color: #86efac;
+    padding: 0.75rem 1rem;
 }
 
 /* Chapter 7 */
@@ -124,12 +129,22 @@ a:active {
 section {
     padding: 60px 0;
     margin-bottom: 0;
-    border-bottom: 1px solid #e2e8f0;
+    border-bottom: 1px solid #4c3563;
 }
 
 nav {
     padding: 15px 0;
-    border-bottom: 1px solid #e2e8f0;
+    border-bottom: 1px solid #4c3563;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem 1.25rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 h2 {
@@ -137,22 +152,22 @@ h2 {
 }
 
 aside {
-    border-left: 4px solid #f59e0b;
+    border-left: 4px solid var(--primary);
     padding-left: 20px;
 }
 
 .project-card {
-    border: 1px solid #e2e8f0;
     border-radius: 8px;
-    transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease, transform 0.3s ease;
 }
 
 .project-card:hover {
-    border-color: #f59e0b;
+    border-color: var(--primary);
+    transform: translateY(-3px);
 }
 
 table {
-    border: 1px solid #cbd5e1;
+    border: 1px solid #4c3563;
 }
 
 img {
@@ -160,7 +175,7 @@ img {
 }
 
 footer {
-    border-top: 1px solid #e2e8f0;
+    border-top: 1px solid #4c3563;
 }
 
 .container {
@@ -243,4 +258,114 @@ nav a {
 blockquote {
     font-style: italic;
     line-height: 1.8;
+}
+
+/* Chapter 11 */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.skills-list li {
+    background: #2d1b43;
+    color: #86efac;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.skills-list li::before {
+    content: "✓ ";
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #1b102b;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+th,
+td {
+    padding: 14px 18px;
+    text-align: left;
+}
+
+th {
+    background: #2d1b43;
+    color: #86efac;
+}
+
+tbody tr:nth-child(even) {
+    background: #241635;
+}
+
+tbody tr:nth-child(odd) {
+    background: #1f1430;
+}
+
+tbody tr:hover {
+    background: #352047;
+}
+
+.timeline {
+    list-style: none;
+    counter-reset: year;
+    margin: 0;
+    padding: 0 0 0 1.5rem;
+}
+
+.timeline li {
+    position: relative;
+    border-left: 3px solid var(--primary);
+    margin-bottom: 20px;
+    padding: 0 0 1.25rem 2.5rem;
+}
+
+.timeline li::before {
+    counter-increment: year;
+    content: counter(year);
+    position: absolute;
+    top: 0;
+    left: -1.1rem;
+    display: grid;
+    width: 2rem;
+    height: 2rem;
+    place-items: center;
+    border-radius: 50%;
+    background: #2d1b43;
+    color: #86efac;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+/* Portfolio content */
+.content-card {
+    margin: 0 0 1.25rem;
+    padding: 1.25rem;
+    border: 1px solid #4c3563;
+    border-left: 4px solid var(--primary);
+    border-radius: 8px;
+    background: #241635;
+}
+
+.content-card h3 {
+    margin-top: 0;
+}
+
+.entry-date {
+    color: #bef264;
+    font-weight: 600;
+}
+
+.project-details {
+    padding: 0 1rem 1rem;
+}
+
+.project-details p {
+    margin: 0.5rem 0;
 }
