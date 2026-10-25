@@ -369,3 +369,180 @@ tbody tr:hover {
 .project-details p {
     margin: 0.5rem 0;
 }
+
+/* Chapter 12 */
+:root {
+    --primary: #4ade80;
+    --primary-visited: #86efac;
+    --text-color: #e2e8f0;
+    --background-color: #1b102b;
+    --heading-secondary: #4ade80;
+    --heading-tertiary: #86efac;
+    --link-hover: #bef264;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(135deg, #1b102b 0%, #241635 55%, #1b102b 100%);
+    color: var(--text-color);
+}
+
+header {
+    background: linear-gradient(135deg, #352047 0%, #241635 100%);
+    color: #f8fafc;
+}
+
+header > h1 {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem 20px 0;
+}
+
+header h1,
+header h2,
+header h3 {
+    color: #f8fafc;
+}
+
+header a,
+header a:visited {
+    color: #86efac;
+}
+
+header a:hover {
+    color: #bef264;
+}
+
+section {
+    border-bottom-color: #4c3563;
+}
+
+main > section {
+    position: relative;
+    border-bottom: 1px solid rgba(196, 181, 212, 0.14);
+}
+
+main > section:nth-of-type(odd) {
+    background: linear-gradient(110deg, #21162f 0%, #251a35 50%, #21162f 100%);
+}
+
+main > section:nth-of-type(even) {
+    background: linear-gradient(110deg, #281b3a 0%, #2c1e40 50%, #281b3a 100%);
+}
+
+main > #projects {
+    background: linear-gradient(135deg, #1b2435 0%, #221d38 55%, #261a35 100%);
+}
+
+main > #contact {
+    background: linear-gradient(135deg, #1b2b32 0%, #202839 55%, #251b38 100%);
+}
+
+main > section h2 {
+    display: table;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.45rem;
+    border-bottom: 3px solid #4ade80;
+}
+
+nav {
+    border-bottom-color: rgba(134, 239, 172, 0.2);
+}
+
+a {
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+a:hover {
+    transform: translateY(-1px);
+}
+
+.project-card {
+    background: #302243;
+    border-color: #614a78;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.project-card:hover {
+    border-color: #4ade80;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.16);
+}
+
+.content-card {
+    border-color: #59436f;
+    border-left-color: #4ade80;
+    background: linear-gradient(135deg, #302243 0%, #2a1d3b 100%);
+}
+
+.profile-img,
+.profile-figure img {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+table {
+    border-color: #59436f;
+    background: #20162e;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+tbody tr:nth-child(even) {
+    background: #302243;
+}
+
+tbody tr:nth-child(odd) {
+    background: #281b38;
+}
+
+tbody tr:hover {
+    background: #3b2a50;
+}
+
+#contact form {
+    padding: 1.25rem;
+    border: 1px solid #4c6b68;
+    border-radius: 8px;
+    background: linear-gradient(145deg, #26363b 0%, #29223b 100%);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea {
+    padding: 0.6rem;
+    border: 1px solid #6b5282;
+    border-radius: 4px;
+    background: #1b102b;
+    color: #f8fafc;
+}
+
+#contact input::placeholder,
+#contact textarea::placeholder {
+    color: #c4b5d4;
+}
+
+button {
+    padding: 0.55rem 0.9rem;
+    border: 1px solid #22c55e;
+    border-radius: 6px;
+    background: #166534;
+    color: #f0fdf4;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover:not(:disabled) {
+    background: #15803d;
+    transform: translateY(-2px);
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+footer {
+    border-top-color: #4c3563;
+    background: linear-gradient(135deg, #20162e 0%, #2b1d3d 100%);
+}
